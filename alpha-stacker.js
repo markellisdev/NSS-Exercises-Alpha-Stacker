@@ -12,22 +12,38 @@ var alphaLen = alphabet.length;
 
 //Working FOR loop for writing out alphabet + line break
 
+var a = 0;
+var alphaString;
+for (a = 0; a < alphaLen; a++) {
+	document.write(alphaString + alphabet[a]);
+	alphaString.push(alphabet[a]);
+}
+
+
+
+
+
 for (x = 0; x < alphaLen; x++) {
 //if statement to print only 3 letters before line break
 console.log("modulous", "x=", x, x % 2);	
-	if ((x % 2) === 1) {
+	if ((x % 3) == 0) {
 		console.log("If statement x=", x, x % 3);
-	document.write("<br>" + alphabet[x]);
-}
+		document.write("<br>" + alphabet[x]);
+	}
 
-else {
-	console.log("else statement x=", x);
-	document.write(alphabet[x]);
-}
+	else {
+		console.log("else statement x=", x);
+		document.write(alphabet[x]);
+	}
 //	document.write(alphabet[x++] + "<br>");
 }
+/*for (x = 0; x < alphaLen; x++) {
+	document.write(alphabet[x])
+}*/
 
+//Create empty string to catch variable??? Richard
 
+//if ((x !== ) && ((x % 3) == 0))
 
 // The stackLetter function should accept the array as the sole argument
 /*function stackLetters (theAlphabetArray) {
