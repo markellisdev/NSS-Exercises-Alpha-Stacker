@@ -12,31 +12,59 @@ var alphaLen = alphabet.length;
 
 //Working FOR loop for writing out alphabet + line break
 
-var a = 0;
-var alphaString;
-for (a = 0; a < alphaLen; a++) {
-	document.write(alphaString + alphabet[a]);
-	alphaString.push(alphabet[a]);
-}
+// var a = 0;
+// var alphaString;
+// for (int a = 0; a < alphaLen; a++) {
+// 	document.write(alphaString + alphabet[a]);
+// 	alphaString.push(alphabet[a]);
+// }
+var theAlphabetArray = [];
+
+var n = 3
+
+function stackLetter(empty) {
+	
+
+
+	for (x = 0; x < alphaLen; x++) {
 
 
 
+		document.write(theAlphabetArray.join("") + alphabet[x] + "<br />");
+	console.log("alphabet value " + alphabet[x])
 
+		theAlphabetArray.push(alphabet[x]);
+	console.log("array value " + theAlphabetArray.join(""))
 
-for (x = 0; x < alphaLen; x++) {
-//if statement to print only 3 letters before line break
-console.log("modulous", "x=", x, x % 2);	
-	if ((x % 3) == 0) {
-		console.log("If statement x=", x, x % 3);
-		document.write("<br>" + alphabet[x]);
+			if ((theAlphabetArray.length % n) == 0) {
+	console.log("array value " + theAlphabetArray.join(""))
+				theAlphabetArray.push(" ");
+				// theAlphabetArray.push(" " + theAlphabetArray.join(""));
+				n = (n+4);
+
+			} 
+
 	}
 
-	else {
-		console.log("else statement x=", x);
-		document.write(alphabet[x]);
-	}
-//	document.write(alphabet[x++] + "<br>");
 }
+
+stackLetter();
+
+
+// THIS IS MY ORIGINAL FOR LOOP TO SPLIT AFTER EVERY 3 LETTERS
+// for (z = 0; z < alphaLen; z++) {
+// //if statement to print only 3 letters before line break
+// console.log("modulous", "z=", z, z % 0);	
+// 	if ((z % 3) == 0) {
+// 		console.log("If statement z=", z, z % 3);
+// 		document.write("<br>" + alphabet[z]);
+// 	}
+
+// 	else {
+// 		console.log("else statement z=", z);
+// 		document.write(alphabet[z]);
+// 	}
+// }
 /*for (x = 0; x < alphaLen; x++) {
 	document.write(alphabet[x])
 }*/
